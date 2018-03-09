@@ -10,7 +10,9 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-`tricky.js` comes with its own standalone version of `phantomjs`, so no need to install anything in advance.
+You need:
+* [NPM](https://www.npmjs.com/get-npm)
+* [Gulp](https://gulpjs.com/)
 
 ### Installing
 
@@ -21,7 +23,13 @@ Just clone this repo and you have it :-)
 Run:
 
 ```bash
-    vendor/phantomjs grab_cookies.js <your-site-url>
+    gulp
+```
+
+It will ask you the url, but if you prefer a non-interactive way, you can use the `--url` parameter, for example:
+
+```bash
+    gulp --url http://www.google.com
 ```
 
 ## Running the tests
@@ -31,6 +39,8 @@ No tests... yet.
 ## Built With
 
 * [PhantomJS](http://phantomjs.org/) - The headless scriptable webkit
+* [NPM](https://www.npmjs.com) - The package manager for JavaScript
+* [Gulp](https://gulpjs.com/) - The toolkit for automating painful or time-consuming tasks in the development workflow
 
 ## Contributing
 
