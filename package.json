@@ -9,7 +9,8 @@
     "readline-sync": "^1.4.9"
   },
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "yargs": "^11.0.0"
   },
   "scripts": {
     "test": "vendor/phantomjs grab_cookies.js http://www.google.com"
