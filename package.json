@@ -1,0 +1,27 @@
+{
+  "name": "triky.js",
+  "version": "0.1.0",
+  "description": "Triky loves to grab cookies.",
+  "main": "grab_cookies.js",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "npm": "^5.7.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "vendor/phantomjs grab_cookies.js http://www.google.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NoLegalTech/triky.js.git"
+  },
+  "keywords": [
+    "cookies"
+  ],
+  "author": "NoLegalTech",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NoLegalTech/triky.js/issues"
+  },
+  "homepage": "https://github.com/NoLegalTech/triky.js#readme"
+}
