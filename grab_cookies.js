@@ -1,5 +1,4 @@
-var page = require('webpage').create(),
-    system = require('system'),
+var phantom = require('phantom'),
     cTable = require('console.table'),
     address,
     _output = {
@@ -9,46 +8,48 @@ var page = require('webpage').create(),
         }
     };
 
-if (system.args.length === 1) {
-    console.log('Usage: vendor/phantomjs grab_cookies.js <some URL>');
-    phantom.exit(-1);
+if (process.argv.length === 2) {
+    console.log('Usage: node grab_cookies.js <some URL>');
+    process.exit(-1);
 }
 
-page.onResourceReceived = function(response) {
-    if (response.contentType && response.contentType.indexOf('javascript') >= 0) {
-        if (response.stage == 'start') {
-            _output.resources.js.push({ 'url': response.url });
-        }
-    }
-};
+address = process.argv[2];
 
-page.onLoadFinished = function(status) {
-    if (status == 'success') {
-        _output.cookies = phantom.cookies;
-        console.table(_output.cookies);
-        phantom.exit()
-    } else {
-        console.log('Failed to load the requested URL: '+address)
-        phantom.exit(-3);
-    }
-};
+var _ph, _page, _outObj;
 
-phantom.cookiesEnabled = true;
-address = system.args[1];
-page.open(address, function (status) {
-    if(status=='success') {
-      _output.cookies = phantom.cookies; // record cookies
-    }else{
-      console.log('Unable to open provided URL: '+address);
-      phantom.exit(-2); // -2: unable to open provided URL
-    }
-});
+phantom.create()
+    .then(function(ph) {
+        _ph = ph;
+        return ph.createPage();
+    })
+    .then(function(page) {
+        _page = page;
+        _outObj = _ph.createOutObject();
 
-// to avoid errors detected while parsing the page (eg. Syntax Error, Type Error, etc.)
-// getting into stdout, so breaking the JSON decoding of returned output.
-page.onError = function (msg, trace) {
-//    console.log(msg);
-//    trace.forEach(function(item) {
-//        console.log('  ', item.file, ':', item.line);
-//    })
-}
+        _outObj.urls = [];
+        _outObj.cookies = [];
+        page.property(
+            'onResourceRequested',
+            function(requestData, networkRequest, out) {
+                out.urls.push(requestData.url);
+                out.cookies = phantom.cookies;
+            },
+            _outObj,
+        );
+        var url = address;
+        return page.open(url);
+    })
+    .then(function(status) {
+        return _outObj.property('cookies');
+    })
+    .then(function(cookies) {
+        console.table(cookies);
+        return _page.close();
+    })
+    .then(function() {
+        return _ph.exit();
+    })
+    .catch(function(err) {
+        _page.close();
+        _ph.exit();
+    });
