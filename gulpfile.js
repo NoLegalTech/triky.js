@@ -8,7 +8,7 @@ gulp.task('default', function(cb) {
     if (url === undefined) {
         url = readlineSync.question('Enter url: ');
     }
-    exec('node showcase.js ' + url, function (err, stdout, stderr) {
+    exec('node example.js ' + url, function (err, stdout, stderr) {
         console.log(stdout);
         console.log(stderr);
         cb(err);
