@@ -4,6 +4,9 @@
 
 Triky loves to grab cookies.
 
+## Build status
+[![Build Status](https://travis-ci.org/NoLegalTech/triky.js.svg?branch=master)](https://travis-ci.org/NoLegalTech/ammana)
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
