@@ -35,6 +35,12 @@ It will ask you the url, but if you prefer a non-interactive way, you can use th
     gulp --url http://www.google.com
 ```
 
+You can use it directly with node as well:
+
+```bash
+    node showcase.js
+```
+
 ## Running the tests
 
 No tests... yet.
