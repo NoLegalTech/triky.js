@@ -15,7 +15,7 @@
     "yargs": "^11.0.0"
   },
   "scripts": {
-    "test": "vendor/phantomjs grab_cookies.js http://www.google.com"
+    "test": "node grab_cookies.js http://www.nolegaltech.com"
   },
   "repository": {
     "type": "git",
