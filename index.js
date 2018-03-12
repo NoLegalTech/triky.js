@@ -35,6 +35,10 @@ module.exports.grab = function triky(url, callback) {
                 return page.open(url);
             })
             .then(function(status) {
+                if (status == 'fail') {
+                    reject('Invalid url');
+                    return callback('Invalid url');
+                }
                 return _outObj.property('cookies');
             })
             .then(function(cookies) {
