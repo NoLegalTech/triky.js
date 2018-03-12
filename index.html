@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>triky.js</title>
+        <meta charset="utf-8">
+        <meta content="width=device-width,initial-scale=1" name="viewport">
+        <link href="css/main.css" rel="stylesheet" type="text/css">
+        <link href=img/logo.png" rel="icon" type="image/png">
+    </head>
+    <body>
+
+        <header>
+            <img src="img/logo.png">
+            <h1>tricky.js</h1>
+            <nav>
+            </nav>
+        </header>
+
+        <a href="https://github.com/NoLegalTech/triky.js.git" target="_blank">
+            <img
+                style="position: absolute; top: 0; right: 0; border: 0;"
+                src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"
+                alt="Fork me on GitHub">
+        </a>
+
+        <section id="quick-start">
+
+            <article class="computer">
+                <pre>$ npm install -g triky</pre>
+                <pre>$ triky http://npmjs.com</pre>
+            </article>
+
+        </section>
+
+        <section id="use">
+
+            <h2>Using as a module</h2>
+
+            <article class="editor">
+                <span class="title">your-script.js</span>
+                <pre><span class="js-keyword">var</span> <span class="js-identifier">triky</span> <span class="js-symbol">=</span> <span class="js-require">require</span><span class="js-keyword">(</span><span class="js-string">'triky'</span><span class="js-keyword">)</span><span class="js-symbol">,</span></pre>
+                <pre>    <span class="js-identifier">url</span> <span class="js-symbol">=</span> <span class="js-string">'<any-url>'</span><span class="js-symbol">;</span></pre>
+                <pre> </pre>
+                <pre><span class="js-identifier">triky</span>.grab<span class="js-keyword">(</span><span class="js-identifier">url</span><span class="js-symbol">,</span> <span class="js-identifier">cookies</span> <span class="js-keyword">=></span> <span class="js-symbol">{</span></pre>
+                <pre>    <span class="js-comment">// do stuff with cookies</span></pre>
+                <pre><span class="js-symbol">}</span><span class="js-keyword">)</span><span class="js-symbol">;</span></pre>
+            </article>
+
+        </section>
+
+        <footer>
+            Developed with ♥ by <a target="_blank" href="http://nolegaltech.com/">NoLegalTech</a>
+        </footer>
+
+    </body>
+</html>

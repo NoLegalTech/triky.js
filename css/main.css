@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+    padding-top: 30px;
+    font-family: Roboto;
+    background-color: antiquewhite;
+}
+
+body > header,
+body > section,
+body > footer {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+body > header {
+    height: 100px;
+}
+
+body > header > img,
+body > header > h1 {
+    float: left;
+}
+
+body > header > h1 {
+    margin: 0;
+    font-size: 32px;
+    margin-left: 10px;
+}
+
+body > header > nav {
+    float: right;
+}
+
+body > section {
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.computer {
+    width: 50%;
+    margin: 0 auto;
+    min-height: 200px;
+    background: #222;
+    border-radius: 25px;
+    border: 15px solid #aaa;
+    padding: 20px 30px;
+    color: #88ff88;
+    font-size: 20px;
+}
+
+.editor {
+    width: 75%;
+    margin: 0 auto;
+    min-height: 200px;
+    background: #222;
+    border-radius: 25px;
+    border-top: 40px solid #aaa;
+    padding: 20px 50px;
+    color: #ccc;
+    font-size: 20px;
+}
+
+.editor .js-keyword {
+    color: #c59a50;
+}
+
+.editor .js-require {
+    color: #7a5a40;
+}
+
+.editor .js-string {
+    color: #80805a;
+}
+
+.editor .js-comment {
+    color: #666;
+}
+
+.editor .js-identifier {
+    font-weight: bold;
+}
+
+.editor .js-symbol {
+    color: #b6b;
+}
+
+.editor .title {
+    margin-top: -50px;
+    position: absolute;
+    font-size: 16px;
+    color: #555;
+}
+
+.editor .title:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: #ccb5b5;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    border-radius: 10px;
+    margin-left: -30px;
+}
+
+body > footer {
+    margin-top: 100px;
+    text-align: center;
+    border-top: 1px solid darkgray;
+    padding-top: 50px;
+    margin-bottom: 80px;
+}
+
+a {
+    text-decoration: none;
+    color: #555;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #888;
+}
