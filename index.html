@@ -32,19 +32,31 @@
 
         </section>
 
-        <section id="use">
+        <section id="use-as-module">
 
             <h2>Using as a module</h2>
 
             <article class="editor">
                 <span class="title">your-script.js</span>
                 <pre><span class="js-keyword">var</span> <span class="js-identifier">triky</span> <span class="js-symbol">=</span> <span class="js-require">require</span><span class="js-keyword">(</span><span class="js-string">'triky'</span><span class="js-keyword">)</span><span class="js-symbol">,</span></pre>
-                <pre>    <span class="js-identifier">url</span> <span class="js-symbol">=</span> <span class="js-string">'<any-url>'</span><span class="js-symbol">;</span></pre>
+                <pre>    <span class="js-identifier">url</span> <span class="js-symbol">=</span> <span class="js-string">'http://npmjs.com'</span><span class="js-symbol">;</span></pre>
                 <pre> </pre>
                 <pre><span class="js-identifier">triky</span>.grab<span class="js-keyword">(</span><span class="js-identifier">url</span><span class="js-symbol">,</span> <span class="js-identifier">cookies</span> <span class="js-keyword">=></span> <span class="js-symbol">{</span></pre>
                 <pre>    <span class="js-comment">// do stuff with cookies</span></pre>
                 <pre><span class="js-symbol">}</span><span class="js-keyword">)</span><span class="js-symbol">;</span></pre>
             </article>
+
+        </section>
+
+        <section id="use-as-rest-api">
+
+            <h2>Using as a REST API</h2>
+
+            <article class="computer">
+                <pre>$ npm run start &</pre>
+                <pre>$ curl http://localhost:3000/cookies/http%3A%2F%2Fnpmjs.com</pre>
+            </article>
+
 
         </section>
 

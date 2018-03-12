@@ -43,7 +43,7 @@ h2 {
 }
 
 .computer {
-    width: 50%;
+    width: 70%;
     margin: 0 auto;
     min-height: 200px;
     background: #222;
@@ -55,7 +55,7 @@ h2 {
 }
 
 .editor {
-    width: 75%;
+    width: 50%;
     margin: 0 auto;
     min-height: 200px;
     background: #222;

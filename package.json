@@ -6,6 +6,7 @@
   "dependencies": {
     "colors": "^1.2.1",
     "console.table": "^0.10.0",
+    "express": "^4.16.3",
     "npm": "^5.7.1",
     "phantom": "^4.0.12",
     "prompt": "^1.0.0",
@@ -14,10 +15,12 @@
   },
   "devDependencies": {
     "gulp": "^3.9.1",
+    "nodemon": "^1.17.1",
     "yargs": "^11.0.0"
   },
   "scripts": {
-    "test": "node example.js"
+    "test": "node example.js",
+    "start": "node server.js"
   },
   "bin": {
     "triky": "./bin/global-triky.js"
