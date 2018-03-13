@@ -30,7 +30,7 @@ module.exports.grab = function triky(url, callback) {
                         out.urls.push(requestData.url);
                         out.cookies = phantom.cookies;
                     },
-                    _outObj,
+                    _outObj
                 );
                 return page.open(url);
             })
