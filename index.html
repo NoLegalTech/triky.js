@@ -6,6 +6,8 @@
         <meta content="width=device-width,initial-scale=1" name="viewport">
         <link href="css/main.css" rel="stylesheet" type="text/css">
         <link href=img/logo.png" rel="icon" type="image/png">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="js/main.js"></script>
     </head>
     <body>
 
@@ -22,6 +24,14 @@
                 src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"
                 alt="Fork me on GitHub">
         </a>
+
+        <section id="post-it">
+            <i class="pin"></i>
+            <blockquote class="note yellow">
+                If you're not a developer, just try out <a class="highlighted-link" href="#demo">the demo</a>!
+                <cite class="author"><a target="_blank" href="http://nolegaltech.com/">NoLegalTech</a></cite>
+            </blockquote>
+        </section>
 
         <section id="quick-start">
 
@@ -57,6 +67,34 @@
                 <pre>$ curl http://localhost:8080/cookies/http%3A%2F%2Fnpmjs.com</pre>
             </article>
 
+
+        </section>
+
+        <section id="demo">
+
+            <h2>Demo</h2>
+
+            <article class="browser">
+                <pre>Enter url: <input id="url" type="text"></input></pre>
+                <button id="get_cookies">Get cookies</button>
+                <div class="full-width">
+                    <div id="loading" class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                </div>
+                <div id="result" class="full-width">
+                    <table>
+                        <thead>
+                            <th>Name</th>
+                            <th>Expires</th>
+                            <!--<th>Domain</th>-->
+                            <!--<th>Path</th>-->
+                            <!--<th>Secure</th>-->
+                            <!--<th>Value</th>-->
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
 
         </section>
 
