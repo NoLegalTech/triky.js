@@ -1,11 +1,12 @@
 {
   "name": "triky",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Triky loves to grab cookies.",
   "main": "index.js",
   "dependencies": {
     "colors": "^1.2.1",
     "console.table": "^0.10.0",
+    "cors": "^2.8.4",
     "express": "^4.16.3",
     "npm": "^5.7.1",
     "phantom": "^4.0.12",
