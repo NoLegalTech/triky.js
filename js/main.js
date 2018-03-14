@@ -1,3 +1,15 @@
+var truncate = function(text, max_chars) {
+    if (text.length <= max_chars) {
+        return text;
+    }
+    return text.substring(0, max_chars - 4) + ' ...';
+}
+
+var format_date = function(date) {
+    var formattedDate = date.toLocaleDateString('en-US', { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' });
+    return (formattedDate != 'Invalid Date') ? formattedDate : '';
+}
+
 var grab_cookies = function() {
     var url = $('input#url').val();
     $('button#get_cookies').hide();
@@ -17,11 +29,11 @@ var grab_cookies = function() {
                 var row = 
                     '<tr>'
                         + '<td>' + cookie.name + '</td>'
-                        + '<td>' + cookie.expires + '</td>'
-                        //+ '<td>' + cookie.domain + '</td>'
+                        + '<td>' + truncate(cookie.value, 20) + '</td>'
+                        + '<td>' + format_date(new Date(cookie.expires)) + '</td>'
+                        + '<td>' + cookie.domain + '</td>'
                         //+ '<td>' + cookie.path + '</td>'
                         //+ '<td>' + cookie.secure + '</td>'
-                        //+ '<td>' + cookie.value + '</td>'
                     + '</tr>';
                 $('#result tbody').append(row);
             }
