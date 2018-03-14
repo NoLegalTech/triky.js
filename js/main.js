@@ -31,11 +31,24 @@ var grab_cookies = function() {
 };
 
 $(function() {
+
     $('input#url').on('keypress', function(e) {
         var code = e.keyCode || e.which;
         if (code == 13) {
             grab_cookies();
         }
     });
+
     $('button#get_cookies').click(grab_cookies);
+
+    $("a[href^='#']").on('click', function(e) {
+        e.preventDefault();
+        var hash = this.hash;
+        if (hash != '') {
+            $('html, body').animate({
+                scrollTop: $(this.hash).offset().top
+            }, 1000);
+        }
+    });
+
 });
