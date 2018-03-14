@@ -32,6 +32,14 @@ module.exports.grab = function triky(url, callback) {
                     },
                     _outObj
                 );
+
+                page.on(
+                    'onResourceError',
+                    function(error) {
+                        console.error(JSON.stringify(error));
+                    }
+                );
+
                 return page.open(url);
             })
             .then(function(status) {
@@ -47,7 +55,6 @@ module.exports.grab = function triky(url, callback) {
                 return callback(cookies);
             })
             .catch(function(err) {
-                _page.close();
                 _ph.exit();
             });
 
