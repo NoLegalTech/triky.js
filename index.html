@@ -75,8 +75,7 @@
             <h2>Demo</h2>
 
             <article class="browser">
-                <pre>Enter url: <input id="url" type="text"></input></pre>
-                <button id="get_cookies">Get cookies</button>
+                <pre>Enter url: <input id="url" type="text"></input><button id="get_cookies">Get cookies</button></pre>
                 <div class="full-width">
                     <div id="loading" class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
                 </div>
@@ -84,15 +83,16 @@
                     <table>
                         <thead>
                             <th>Name</th>
+                            <th>Value</th>
                             <th>Expires</th>
-                            <!--<th>Domain</th>-->
+                            <th>Origin</th>
                             <!--<th>Path</th>-->
                             <!--<th>Secure</th>-->
-                            <!--<th>Value</th>-->
                         </thead>
                         <tbody>
                         </tbody>
                     </table>
+                    <span class="error"></span>
                 </div>
             </article>
 

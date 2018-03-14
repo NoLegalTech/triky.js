@@ -73,14 +73,15 @@ h2 {
 }
 
 .browser {
+    width: 80%;
     background: #ccc;
     color: #555;
     border-bottom: 4px solid #aaa;
     border-left: 2px solid #aaa;
     border-right: 4px solid #aaa;
     float: left;
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: 10%;
+    margin-right: 10%;
     box-sizing: border-box;
 }
 
@@ -88,7 +89,7 @@ h2 {
     border: 2px solid #aaa;
     line-height: 30px;
     min-width: 60%;
-    margin-left: 2%;
+    margin: 2%;
     font-size: 16px;
     padding: 0px 10px;
 }
@@ -355,9 +356,17 @@ a.highlighted-link {
 
 #loading,
 #result {
-    display: none;
     margin-top: 20px;
     margin-bottom: 10px;
+}
+
+#loading,
+#result > table {
+    display: none;
+}
+
+#result .error {
+    color: red;
 }
 
 .full-width {
@@ -365,8 +374,19 @@ a.highlighted-link {
     width: 100%;
 }
 
+table {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 3px solid #888;
+    background: #ddd;
+    border-radius: 10px;
+    padding: 10px;
+}
+
 th {
     font-weight: bold;
     border-bottom: 3px solid #888;
     text-align: left;
+    border-right: 20px solid #ddd;
+    border-bottom-right-radius: 20px;
 }
