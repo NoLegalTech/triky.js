@@ -2,7 +2,7 @@ var triky = require('./'),
     cors = require('cors'),
     express = require('express'),
     app = express(),
-    port = process.env.OPENSHIFT_NODEJS_PORT || 8080,
+    port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
     server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 
 app.use(cors());
