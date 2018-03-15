@@ -59,6 +59,10 @@ h2 {
     font-size: 20px;
 }
 
+.computer > pre:before {
+    content: "$ ";
+}
+
 .browser,
 .editor {
     width: 50%;
