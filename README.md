@@ -19,7 +19,9 @@ You need:
 
 ### Installing
 
-Just clone this repo and you have it :-)
+Watch asciicast:
+
+[<img src="https://asciinema.org/a/174762.png" width="200">](https://asciinema.org/a/174762)
 
 ### Basic use
 
