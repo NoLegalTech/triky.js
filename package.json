@@ -8,6 +8,7 @@
     "console.table": "^0.10.0",
     "cors": "^2.8.4",
     "express": "^4.16.3",
+    "moment": "^2.22.2",
     "npm": "^5.7.1",
     "phantom": "^4.0.12",
     "prompt": "^1.0.0",
