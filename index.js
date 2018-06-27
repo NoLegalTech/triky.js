@@ -8,11 +8,11 @@ var phantom = require('phantom'),
     _outObj 
 ;
 
-var Triky = {
-    example: function example(a, b) {
-        return a + b;
-    },
-    getExpirationTime: function(cookie) {
+var Triky = function() {
+
+    var self = this;
+
+    self.getExpirationTime = function(cookie) {
         var now = moment().format('X');
         var secs = cookie.expiry - now + 1;
         var mins = 0;
@@ -62,8 +62,9 @@ var Triky = {
             cookie.expirationTime = cookie.expirationTime + ' 1 s ';
         }
         return cookie;
-    },
-    grab: function triky(url, callback) {
+    };
+
+    self.grab = function(url, callback) {
         return new Promise((resolve, reject) => {
 
             phantom.create()
@@ -107,7 +108,7 @@ var Triky = {
                     _ph.exit();
                     var result = [];
                     cookies.forEach(function(cookie) {
-                        result.push(Triky.getExpirationTime(cookie));
+                        result.push(self.getExpirationTime(cookie));
                     });
                     resolve(result);
                     return callback(cookies);
@@ -117,11 +118,10 @@ var Triky = {
                 });
 
         });
-    }
+    };
+
+    return self;
+
 };
 
-module.exports = {
-    example: Triky.example,
-    getExpirationTime: Triky.getExpirationTime,
-    grab: Triky.grab
-};
+module.exports = new Triky();
