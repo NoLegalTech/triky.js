@@ -16,12 +16,13 @@
     "webpage": "^0.3.0"
   },
   "devDependencies": {
+    "chai": "^4.1.2",
     "gulp": "^3.9.1",
     "nodemon": "^1.17.1",
     "yargs": "^11.0.0"
   },
   "scripts": {
-    "test": "node example.js",
+    "test": "mocha tests",
     "start": "node server.js"
   },
   "bin": {
