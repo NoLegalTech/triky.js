@@ -5,7 +5,7 @@
 Triky loves to grab cookies.
 
 ## Build status
-[![Build Status](https://travis-ci.org/NoLegalTech/triky.js.svg?branch=master)](https://travis-ci.org/NoLegalTech/ammana)
+[![Build Status](https://travis-ci.org/NoLegalTech/triky.js.svg?branch=master)](https://travis-ci.org/NoLegalTech/triky.js)
 
 ## Getting Started
 
