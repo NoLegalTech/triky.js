@@ -22,6 +22,7 @@
     "gulp-jslint": "^1.0.10",
     "mocha": "^5.2.0",
     "nodemon": "^1.17.5",
+    "request": "^2.87.0",
     "yargs": "^11.1.0"
   },
   "scripts": {
