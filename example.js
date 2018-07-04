@@ -10,6 +10,6 @@ if (process.argv.length > 2) {
     url = process.argv[2];
 }
 
-triky.grab(url, (cookies) => {
+triky.grab(url, function (cookies) {
     console.table(cookies);
 });
