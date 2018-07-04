@@ -45,6 +45,12 @@ You can use it directly with node as well:
 
 No tests... yet.
 
+## Lint
+
+```bash
+    gulp lint
+```
+
 ## Built With
 
 * [PhantomJS](http://phantomjs.org/) - The headless scriptable webkit

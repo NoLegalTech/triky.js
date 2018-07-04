@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var exec = require('child_process').exec;
 var readlineSync = require('readline-sync');
 var argv = require('yargs').argv;
+var jslint = require('gulp-jslint');
 
 gulp.task('default', function(cb) {
     var url = argv.url;
@@ -13,4 +14,11 @@ gulp.task('default', function(cb) {
         console.log(stderr);
         cb(err);
     });
+});
+
+gulp.task('lint', function() {
+    return gulp.src(['example.js'])
+        .pipe(jslint())
+        .pipe(jslint.reporter('default'));
+
 });
