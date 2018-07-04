@@ -1,9 +1,9 @@
 /*jslint node: true */
 "use strict";
 
-var triky = require('./'),
-    cTable = require('console.table'),
+require('console.table');
 
+var triky = require('./'),
     url = 'http://nolegaltech.com';
 
 if (process.argv.length > 2) {
