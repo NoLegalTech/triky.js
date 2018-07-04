@@ -7,6 +7,7 @@ var triky = require('./'),
     request = require('request'),
     cTable = require('console.table'),
     optionDefinitions = [
+        { name: 'help', alias: 'h', type: Boolean, defaultValue: false },
         { name: 'policy', alias: 'p', type: Boolean },
         { name: 'template', alias: 't', type: String, defaultValue: 'templates/default.html' },
         { name: 'url', alias: 'u', type: String, defaultOption: true, defaultValue: 'http://nolegaltech.com' }
@@ -44,6 +45,11 @@ var printCookie = function(cookie) {
    { wtc_id: 2,
         */
 };
+
+if (options.help) {
+    console.log('Help');
+    return;
+}
 
 triky.grab(options.url, function (cookies) {
     if (options.policy) {
