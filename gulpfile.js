@@ -5,6 +5,18 @@ var argv = require('yargs').argv;
 var jslint = require('gulp-jslint');
 
 gulp.task('default', function(cb) {
+    return gulp.src(['example.js'])
+        .pipe(jslint())
+        .pipe(jslint.reporter('default'));
+});
+
+gulp.task('lint', function() {
+    return gulp.src(['example.js'])
+        .pipe(jslint())
+        .pipe(jslint.reporter('default'));
+});
+
+gulp.task('run', function(cb) {
     var url = argv.url;
     if (url === undefined) {
         url = readlineSync.question('Enter url: ');
@@ -14,11 +26,4 @@ gulp.task('default', function(cb) {
         console.log(stderr);
         cb(err);
     });
-});
-
-gulp.task('lint', function() {
-    return gulp.src(['example.js'])
-        .pipe(jslint())
-        .pipe(jslint.reporter('default'));
-
 });
