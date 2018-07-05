@@ -9,12 +9,6 @@ var files_to_lint = [
     'tests/triky-test.js'
 ];
 
-gulp.task('default', function(cb) {
-    return gulp.src(files_to_lint)
-        .pipe(jslint())
-        .pipe(jslint.reporter('default'));
-});
-
 gulp.task('lint', function() {
     return gulp.src(files_to_lint)
         .pipe(jslint())
@@ -32,3 +26,13 @@ gulp.task('run', function(cb) {
         cb(err);
     });
 });
+
+gulp.task('test', function(cb) {
+    exec('npm test', function (err, stdout, stderr) {
+        console.log(stdout);
+        console.log(stderr);
+        cb(err);
+    });
+});
+
+gulp.task('default', [ 'lint', 'test' ]);
