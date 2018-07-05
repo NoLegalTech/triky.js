@@ -4,14 +4,19 @@ var readlineSync = require('readline-sync');
 var argv = require('yargs').argv;
 var jslint = require('gulp-jslint');
 
+var files_to_lint = [
+    'example.js',
+    'tests/triky-test.js'
+];
+
 gulp.task('default', function(cb) {
-    return gulp.src(['example.js'])
+    return gulp.src(files_to_lint)
         .pipe(jslint())
         .pipe(jslint.reporter('default'));
 });
 
 gulp.task('lint', function() {
-    return gulp.src(['example.js'])
+    return gulp.src(files_to_lint)
         .pipe(jslint())
         .pipe(jslint.reporter('default'));
 });
