@@ -1,0 +1,145 @@
+{ domain: '.nolegaltech.com',
+  expires: 'Sat, 04 Jul 2020 17:13:51 GMT',
+  expiry: 1593882831,
+  httponly: false,
+  name: '_ga',
+  path: '/',
+  secure: false,
+  value: 'GA1.2.1209194768.1530810832',
+  expirationTime: ' 2 years ',
+  additionalInfo: 
+   { wtc_id: 1,
+     name: '_ga',
+     origin: 'google.com',
+     type: 'Analítica',
+     goal: 'distinguir a los usuarios',
+     expiration_time: '62985600',
+     published: '28/06/2018',
+     usage_url: 'https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage?hl=es-419',
+     optout_url: 'https://tools.google.com/dlpage/gaoptout',
+     verified: true } }
+key                  value                                                                                          
+-------------------  -----------------------------------------------------------------------------------------------
+name                 _ga                                                                                            
+domain               .nolegaltech.com                                                                               
+expires              Sat, 04 Jul 2020 17:13:51 GMT                                                                  
+expiry               1593882831                                                                                     
+httponly             false                                                                                          
+path                 /                                                                                              
+secure               false                                                                                          
+value                GA1.2.1209194768.1530810832                                                                    
+expirationTime        2 years                                                                                       
+WTC.wtc_id           1                                                                                              
+WTC.name             _ga                                                                                            
+WTC.origin           google.com                                                                                     
+WTC.type             Analítica                                                                                      
+WTC.goal             distinguir a los usuarios                                                                      
+WTC.expiration_time  62985600                                                                                       
+WTC.published        28/06/2018                                                                                     
+WTC.usage_url        https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage?hl=es-419
+WTC.optout_url       https://tools.google.com/dlpage/gaoptout                                                       
+WTC.verified         true                                                                                           
+
+{ domain: '.nolegaltech.com',
+  expires: 'Fri, 06 Jul 2018 17:13:51 GMT',
+  expiry: 1530897231,
+  httponly: false,
+  name: '_gid',
+  path: '/',
+  secure: false,
+  value: 'GA1.2.970521766.1530810832',
+  expirationTime: ' 1 day ',
+  additionalInfo: 
+   { wtc_id: 3,
+     name: '_gid',
+     origin: 'google.com',
+     type: 'Analítica',
+     goal: 'distinguir a los usuarios',
+     expiration_time: '86400',
+     published: '28/06/2018',
+     usage_url: 'https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage?hl=es-419',
+     optout_url: 'https://tools.google.com/dlpage/gaoptout',
+     verified: true } }
+key                  value                                                                                          
+-------------------  -----------------------------------------------------------------------------------------------
+name                 _gid                                                                                           
+domain               .nolegaltech.com                                                                               
+expires              Fri, 06 Jul 2018 17:13:51 GMT                                                                  
+expiry               1530897231                                                                                     
+httponly             false                                                                                          
+path                 /                                                                                              
+secure               false                                                                                          
+value                GA1.2.970521766.1530810832                                                                     
+expirationTime        1 day                                                                                         
+WTC.wtc_id           3                                                                                              
+WTC.name             _gid                                                                                           
+WTC.origin           google.com                                                                                     
+WTC.type             Analítica                                                                                      
+WTC.goal             distinguir a los usuarios                                                                      
+WTC.expiration_time  86400                                                                                          
+WTC.published        28/06/2018                                                                                     
+WTC.usage_url        https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage?hl=es-419
+WTC.optout_url       https://tools.google.com/dlpage/gaoptout                                                       
+WTC.verified         true                                                                                           
+
+{ domain: '.nolegaltech.com',
+  expires: 'Thu, 05 Jul 2018 17:14:51 GMT',
+  expiry: 1530810891,
+  httponly: false,
+  name: '_gat',
+  path: '/',
+  secure: false,
+  value: '1',
+  expirationTime: ' 1 min ',
+  additionalInfo: 
+   { wtc_id: 2,
+     name: '_gat',
+     origin: 'google.com',
+     type: 'Analítica',
+     goal: 'limitar el porcentaje de solicitudes',
+     expiration_time: '60',
+     published: '28/06/2018',
+     usage_url: 'https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage?hl=es-419',
+     optout_url: 'https://tools.google.com/dlpage/gaoptout',
+     verified: true } }
+key                  value                                                                                          
+-------------------  -----------------------------------------------------------------------------------------------
+name                 _gat                                                                                           
+domain               .nolegaltech.com                                                                               
+expires              Thu, 05 Jul 2018 17:14:51 GMT                                                                  
+expiry               1530810891                                                                                     
+httponly             false                                                                                          
+path                 /                                                                                              
+secure               false                                                                                          
+value                1                                                                                              
+expirationTime        1 min                                                                                         
+WTC.wtc_id           2                                                                                              
+WTC.name             _gat                                                                                           
+WTC.origin           google.com                                                                                     
+WTC.type             Analítica                                                                                      
+WTC.goal             limitar el porcentaje de solicitudes                                                           
+WTC.expiration_time  60                                                                                             
+WTC.published        28/06/2018                                                                                     
+WTC.usage_url        https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage?hl=es-419
+WTC.optout_url       https://tools.google.com/dlpage/gaoptout                                                       
+WTC.verified         true                                                                                           
+
+{ domain: 'nolegaltech.com',
+  httponly: false,
+  name: 'PHPSESSID',
+  path: '/',
+  secure: false,
+  value: 'slrj1njcoikg4qpjvendm7c5k0',
+  expirationTime: '' }
+key             value                     
+--------------  --------------------------
+name            PHPSESSID                 
+domain          nolegaltech.com           
+expires                                   
+expiry                                    
+httponly        false                     
+path            /                         
+secure          false                     
+value           slrj1njcoikg4qpjvendm7c5k0
+expirationTime                            
+

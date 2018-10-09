@@ -15,6 +15,7 @@ var triky = require('./'),
     options = commandLineArgs(optionDefinitions);
 
 var printCookie = function (cookie) {
+    console.log(cookie);
     var table = [];
     table.push({key: 'name', value: cookie.name});
     table.push({key: 'domain', value: cookie.domain});

@@ -80,4 +80,14 @@ describe('triky', function () {
 
     });
 
+    describe('getPolicy() should return the generated policy', function () {
+
+        it('2 years', function () {
+            expect(
+                triky.getExpirationTime({expiry: addSeconds(now, 2 * 365 * 3600 * 24 - 1)}).expirationTime
+            ).to.equal(' 2 years ');
+        });
+
+    });
+
 });
