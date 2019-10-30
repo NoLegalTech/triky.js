@@ -28,17 +28,21 @@ var Triky = function() {
 
         cookie.expirationTime = '';
 
-        while (secs > 0) {
-            var num_units = Math.floor(secs / time_unit.value);
-            if (num_units > 0) {
-                cookie.expirationTime += ' '
-                    + num_units
-                    + ' '
-                    + (num_units == 1 ? time_unit.unit : time_unit.plural)
-                    + ' ';
-                secs -= num_units * time_unit.value;
+        if (secs == 1) {
+            cookie.expirationTime = '1 s';
+        } else {
+            while (secs > 1) {
+                var num_units = Math.floor(secs / time_unit.value);
+                if (num_units > 0) {
+                    cookie.expirationTime += ' '
+                        + num_units
+                        + ' '
+                        + (num_units == 1 ? time_unit.unit : time_unit.plural)
+                        + ' ';
+                    secs -= num_units * time_unit.value;
+                }
+                time_unit = time_units.pop();
             }
-            time_unit = time_units.pop();
         }
 
         return cookie;
