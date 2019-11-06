@@ -5,7 +5,7 @@ var moment = require('moment');
 var phantom = require('phantom'),
     _ph,
     _page,
-    _outObj 
+    _outObj
 ;
 
 var Triky = function() {
@@ -60,14 +60,41 @@ var Triky = function() {
                     _page = page;
                     _outObj = _ph.createOutObject();
 
-                    _outObj.urls = [];
-                    _outObj.cookies = [];
+                    _outObj.input = {
+                        url: url
+                    };
+
+                    _outObj.result = {
+                        urls: {
+                            internal: [],
+                            external: []
+                        },
+                        resources: {
+                            internal: [],
+                            external: []
+                        },
+                        cookies: [],
+                        google_analytics: false,
+                        forms: []
+                    };
 
                     page.property(
                         'onResourceRequested',
                         function(requestData, networkRequest, out) {
-                            out.urls.push(requestData.url);
-                            out.cookies = phantom.cookies;
+                            var analyticsUrl = new RegExp('^http(s)?://(www|ssl)\.google-analytics\.com.*');
+                            var sameDomainUrl = new RegExp(out.input.url + '.*');
+
+                            if (analyticsUrl.test(requestData.url)){
+                                out.result.google_analytics = true;
+                            }
+
+                            if (sameDomainUrl.test(requestData.url)){
+                                out.result.resources.internal.push(requestData.url);
+                            } else {
+                                out.result.resources.external.push(requestData.url);
+                            }
+
+                            out.result.cookies = phantom.cookies;
                         },
                         _outObj
                     );
@@ -86,16 +113,20 @@ var Triky = function() {
                         reject('Invalid url');
                         return callback('Invalid url');
                     }
-                    return _outObj.property('cookies');
+                    return _outObj.property('result');
+                    //return {
+                        //cookies: _outObj.property('cookies')
+                    //};
                 })
-                .then(function(cookies) {
-                    _ph.exit();
-                    var result = [];
-                    cookies.forEach(function(cookie) {
-                        result.push(self.getExpirationTime(cookie));
+                .then(function(result) {
+                    var final_cookies = [];
+                    result.cookies.forEach(function(cookie) {
+                        final_cookies.push(self.getExpirationTime(cookie));
                     });
+                    result.cookies = final_cookies;
+                    _ph.exit();
                     resolve(result);
-                    return callback(cookies);
+                    return callback(result);
                 })
                 .catch(function(err) {
                     _ph.exit();
