@@ -15,7 +15,7 @@ describe('triky', function() {
       it('1 s', function() {
         expect(
             triky.getExpirationTime({ expiry: now }).expirationTime
-        ).to.equal(' 1 s ');
+        ).to.equal('1 s');
       });
 
       it('1 min', function() {
@@ -27,7 +27,7 @@ describe('triky', function() {
       it('1 min 1 s', function() {
         expect(
             triky.getExpirationTime({ expiry: addSeconds(now, 60) }).expirationTime
-        ).to.equal(' 1 min  1 s ');
+        ).to.equal(' 1 min ');
       });
 
       it('1 h', function() {
@@ -39,7 +39,7 @@ describe('triky', function() {
       it('1 h 1 min 1 s', function() {
         expect(
             triky.getExpirationTime({ expiry: addSeconds(now, 3660) }).expirationTime
-        ).to.equal(' 1 h  1 min  1 s ');
+        ).to.equal(' 1 h  1 min ');
       });
 
       it('1 day', function() {

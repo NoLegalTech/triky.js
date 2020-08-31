@@ -1,6 +1,6 @@
 {
   "name": "triky",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Triky loves to grab cookies.",
   "main": "index.js",
   "dependencies": {
